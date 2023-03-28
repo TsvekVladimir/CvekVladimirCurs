@@ -7,7 +7,8 @@ def setregistr(nameentr, sname, lname, grp, connstud, cursor, regwindow):
     surname = sname.get()
     lastname = lname.get()
     group = grp.get()
-    cursor.execute("""INSERT INTO student VALUES (?, ?, ?, ?);""", (name, surname, lastname, group))
+    cursor.execute("""INSERT INTO student(fname, surname, lastname, groups) VALUES (?, ?, ?, ?);""",
+                   (name, surname, lastname, group))
     connstud.commit()
     msg = "Ваши данные сохранены"
     mb.showinfo("Информация", msg)

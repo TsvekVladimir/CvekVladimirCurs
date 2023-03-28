@@ -1,8 +1,9 @@
 import tkinter as tk
 import tkinter.messagebox as mb
 from database.server import connstud, cursor
-from enter_sys import insys
-from registration import registr
+from GUI.enter_sys import insys
+from GUI.registration import registr
+
 
 class Loginwindow(tk.Tk):
     def __init__(self):
@@ -40,6 +41,7 @@ class Loginwindow(tk.Tk):
     # def show_error(self):
     #     msg = "Приложение обнаружило неизвестную ошибку"
     #     mb.showerror("Ошибка", msg)
+
 
 if __name__ == "__main__":
     app = Loginwindow()
